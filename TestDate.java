@@ -19,5 +19,25 @@ class TestDate {
 
         // TODO : your code after this line
         
+// A date formatted as "month-day-year", ex:04-22-2019 The day of the week corresponding to the date, ex:2
+
+// Concatenates texts_"The date is: "_ and_"The day of week is:"_ in front of the corresponding data, 
+// before displaying them in the terminal.
+
+//Using simpleDateFormat --Aus der Questbeschreibung--
+
+SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+Calendar c = new GregorianCalendar(year, month-1, day);
+Date d = c.getTime();
+
+// 
+
+
+//
+int dayWeek = c.get(Calendar.DAY_OF_WEEK);
+
+System.out.println("The date is: " + sdf.format(d));
+System.out.println("The day of week is " + dayWeek);
     }
+
 }
